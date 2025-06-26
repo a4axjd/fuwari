@@ -1,0 +1,63 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Import all style files */
+@import './variables.css';
+@import './main.css';
+@import './markdown.css';
+@import './markdown-extend.css';
+@import './transition.css';
+@import './scrollbar.css';
+@import './photoswipe.css';
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CSS Variables */
+:root {
+  --radius-large: 1rem;
+  --content-delay: 150ms;
+  --page-width: 75rem;
+  --hue: 250;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--selection-bg);
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-bg-hover);
+}
